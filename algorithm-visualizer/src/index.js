@@ -17,7 +17,7 @@ root.render(
     <Routes>
       <Route path='/' element={<App/>}/>
       <Route path='/Sorting' element={<Sorting/>}/>
-      {/*<Route path='/Search' element={<Search/>}/>*/}
+      <Route path='/Search' element={<Search/>}/>
       <Route path='*' element={<Error404/>}/>
     </Routes>
   </BrowserRouter>
