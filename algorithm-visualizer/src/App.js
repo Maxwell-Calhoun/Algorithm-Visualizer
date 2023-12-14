@@ -1,13 +1,29 @@
-import logo from './logo.svg';
+import Button from 'react-bootstrap/Button'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Algorithm Visualizer</h1>
+        <h3>Select algorithms from below to see the visualizations</h3>
+      </header>
+      <body className="App-body">
+        <div className="Algorithms">
+          <div>
+          <Button variant="secondary" size="lg" onClick={() => null}>
+            Sorting Algorithms
+          </Button>
+          </div>
+          <div>
+          <Button variant="secondary" size="lg" onClick={() => null}>
+            Search Algorithms
+          </Button>
+          </div>
+        </div>
+        {/* keeping for potential future implemenations 
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -16,8 +32,11 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
+        </a>*/}
+      </body>
+      <footer className="App-footer"> 
+        @TODO: GITHUB LINK
+      </footer>
     </div>
   );
 }
