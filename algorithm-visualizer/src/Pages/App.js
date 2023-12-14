@@ -1,8 +1,9 @@
-import Button from 'react-bootstrap/Button';
 import './CSS/App.css';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="App">
       <header className="App-header">
@@ -12,12 +13,12 @@ export default function App() {
       <body className="App-body">
         <div className="Algorithms">
           <div>
-          <Button variant="secondary" size="lg" onClick={() => null}>
+          <Button variant="secondary" size="lg" onClick={() => navigate("/Sorting")}>
             Sorting Algorithms
           </Button>
           </div>
           <div>
-          <Button variant="secondary" size="lg" onClick={() => null}>
+          <Button variant="secondary" size="lg" onClick={() => navigate("/Sorting")}>
             Search Algorithms
           </Button>
           </div>

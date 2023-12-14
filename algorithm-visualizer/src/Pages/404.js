@@ -4,7 +4,7 @@ export default function Error404() {
     return (
         <div>
             <h1>Error 404</h1>
-            Page Not Found
+            <p>Page Not Found</p>
         </div>
     )
 }
