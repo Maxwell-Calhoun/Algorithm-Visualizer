@@ -1,7 +1,8 @@
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 import './CSS/App.css';
 
-function App() {
+export default function App() {
+  //const navigate = useNavigate();
   return (
     <div className="App">
       <header className="App-header">
@@ -40,5 +41,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
