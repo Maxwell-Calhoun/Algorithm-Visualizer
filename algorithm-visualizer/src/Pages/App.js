@@ -10,7 +10,7 @@ export default function App() {
         <h1>Algorithm Visualizer</h1>
         <h3>Select algorithms from below to see the visualizations</h3>
       </header>
-      <body className="App-body">
+      <div className="App-body">
         <div className="Algorithms">
           <div>
           <Button variant="secondary" size="lg" onClick={() => navigate("/Sorting")}>
@@ -18,7 +18,7 @@ export default function App() {
           </Button>
           </div>
           <div>
-          <Button variant="secondary" size="lg" onClick={() => navigate("/Sorting")}>
+          <Button variant="secondary" size="lg" onClick={() => navigate("/Search")}>
             Search Algorithms
           </Button>
           </div>
@@ -35,7 +35,7 @@ export default function App() {
         >
           Learn React
         </a>*/}
-      </body>
+      </div>
       <footer className="App-footer"> 
         @TODO: GITHUB LINK
       </footer>
