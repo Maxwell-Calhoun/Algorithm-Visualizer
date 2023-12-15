@@ -1,7 +1,7 @@
 import p5 from "p5";
 import React, { useEffect, useRef } from 'react';
 
-let WIDTH;
+export let WIDTH;
 let HEIGHT;
 
 export const SortSketch = ({dataRef}) => {
@@ -34,7 +34,7 @@ export const SortSketch = ({dataRef}) => {
 
 export default SortSketch;
 
-const getRandomData = (n) => {
+export const getRandomData = (n) => {
     if (n < 0) {return};
     let randomData = [];
     for (let ii = 0; ii < n; ii++) {

@@ -22,6 +22,10 @@ export const insertionSort = async (dataRef) => {
     }
 };
 
+export const mergeSort = async (dataRef) => {
+    
+}
+
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
