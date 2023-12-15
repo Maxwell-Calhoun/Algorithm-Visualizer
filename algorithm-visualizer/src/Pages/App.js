@@ -2,7 +2,7 @@ import './CSS/App.css';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 
-export default function App() {
+const App = () => {
   const navigate = useNavigate();
   return (
     <div className="App">
@@ -42,3 +42,4 @@ export default function App() {
     </div>
   );
 }
+export default App;

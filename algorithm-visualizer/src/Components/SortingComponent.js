@@ -19,9 +19,8 @@ export const SortSketch = ({dataRef}) => {
                 canvas.background(0);
                 const data = dataRef.current;
                 for (let ii = 0; ii < data.length; ii++) {
-                    canvas.rect(ii*10, HEIGHT, 10, -data[ii]);
+                    canvas.rect(ii*10, HEIGHT, 10, -data[ii] * Math.log(HEIGHT / 8));
                 }
-                
             };
         }
         const p5_object = new p5(sketch, sketchRef.current);
@@ -31,7 +30,7 @@ export const SortSketch = ({dataRef}) => {
         };
     }, [dataRef]);
     return <div ref={sketchRef}></div>;
-}
+};
 
 export default SortSketch;
 

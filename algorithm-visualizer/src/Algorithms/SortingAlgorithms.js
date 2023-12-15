@@ -2,8 +2,8 @@ const swap = async (data, x, y) => {
     var temp = data[x];
     data[x] = data[y];
     data[y] = temp;
-    await sleep(2);
-}
+    await sleep(1);
+};
 
 export const insertionSort = async (dataRef) => {
     let data = dataRef.current;
@@ -20,8 +20,8 @@ export const insertionSort = async (dataRef) => {
             sorted++;
         }
     }
-}
+};
 
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
-}
+};
