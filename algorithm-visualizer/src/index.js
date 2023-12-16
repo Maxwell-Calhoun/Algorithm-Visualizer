@@ -13,7 +13,7 @@ import Error404 from './Pages/404';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/Algorithm-Visualizer'>
     <Routes>
       <Route path='/' element={<App/>}/>
       <Route path='/Sorting' element={<Sorting/>}/>
