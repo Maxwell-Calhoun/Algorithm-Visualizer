@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Algorithm-Visualizer/static/css/main.2b825ed1.css",
-    "main.js": "/Algorithm-Visualizer/static/js/main.4a916f30.js",
+    "main.css": "/Algorithm-Visualizer/static/css/main.8515e678.css",
+    "main.js": "/Algorithm-Visualizer/static/js/main.5bdb6f2e.js",
     "static/js/787.d0d4ea17.chunk.js": "/Algorithm-Visualizer/static/js/787.d0d4ea17.chunk.js",
+    "static/media/wrench.png": "/Algorithm-Visualizer/static/media/wrench.c677ca6b6860ffedb681.png",
     "index.html": "/Algorithm-Visualizer/index.html",
-    "main.2b825ed1.css.map": "/Algorithm-Visualizer/static/css/main.2b825ed1.css.map",
-    "main.4a916f30.js.map": "/Algorithm-Visualizer/static/js/main.4a916f30.js.map",
+    "main.8515e678.css.map": "/Algorithm-Visualizer/static/css/main.8515e678.css.map",
+    "main.5bdb6f2e.js.map": "/Algorithm-Visualizer/static/js/main.5bdb6f2e.js.map",
     "787.d0d4ea17.chunk.js.map": "/Algorithm-Visualizer/static/js/787.d0d4ea17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b825ed1.css",
-    "static/js/main.4a916f30.js"
+    "static/css/main.8515e678.css",
+    "static/js/main.5bdb6f2e.js"
   ]
 }
