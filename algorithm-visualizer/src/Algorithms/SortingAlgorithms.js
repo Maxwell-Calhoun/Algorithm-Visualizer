@@ -8,7 +8,6 @@ const swap = async (data, x, y) => {
 };
 
 export const insertionSort = async (data) => {
-    let count = 0;
     let sorted = 0;
     console.log(speed)
     for (let ii = 1; ii < data.length; ii++) {
@@ -16,7 +15,6 @@ export const insertionSort = async (data) => {
             await swap(data, ii, sorted);
             ii = ii - 2;
             sorted--;
-            count++;
         } else {
             sorted++;
         }
@@ -41,8 +39,8 @@ const merge = async (arr, left, right, middle) => {
     let l = middle - left + 1;
     let r = right - middle;
     
-    const tempL = new Array();
-    const tempR = new Array();
+    const tempL = [];
+    const tempR = [];
     
     for (let ii = 0; ii < l; ii++) {
         tempL[ii] = arr[left + ii];

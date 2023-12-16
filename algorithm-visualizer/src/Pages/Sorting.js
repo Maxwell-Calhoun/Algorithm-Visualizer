@@ -1,5 +1,5 @@
 import './CSS/Sorting.css';
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { insertionSort, mergeSort } from "../Algorithms/SortingAlgorithms";
 import { SortSketch, getRandomData, WIDTH } from "../Components/SortingComponent";
