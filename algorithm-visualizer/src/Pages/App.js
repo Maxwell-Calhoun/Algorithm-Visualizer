@@ -1,4 +1,5 @@
 import './CSS/App.css';
+import { Footer } from '../Components/Footer';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 
@@ -36,9 +37,7 @@ const App = () => {
           Learn React
         </a>*/}
       </div>
-      <footer className="App-footer"> 
-        @TODO: GITHUB LINK
-      </footer>
+      <Footer/>
     </div>
   );
 }
