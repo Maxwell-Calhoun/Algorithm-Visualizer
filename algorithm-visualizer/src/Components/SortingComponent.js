@@ -19,7 +19,7 @@ export const SortSketch = ({dataRef}) => {
                 canvas.background(0);
                 const data = dataRef.current;
                 for (let ii = 0; ii < data.length; ii++) {
-                    canvas.rect(ii*10, HEIGHT, 10, -data[ii] * Math.log(HEIGHT / 8));
+                    canvas.rect(ii*10, HEIGHT, 10, -data[ii] * Math.log(HEIGHT / 10));
                 }
             };
         }
