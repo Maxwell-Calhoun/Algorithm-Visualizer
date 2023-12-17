@@ -12,7 +12,7 @@ export const Header = () => {
     <Navbar className="Header">
         <Container className='Container'>
             <Nav.Link onClick={() => navigate("/")}>
-                <img src={icon} className='icon'/>
+                <img src={icon} className='icon' alt='Site Icon'/>
             </Nav.Link>
         </Container>
         <Container className='Container'>
