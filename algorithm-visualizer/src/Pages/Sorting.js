@@ -12,23 +12,25 @@ export default class Sorting extends React.Component {
         super();
         this.state = { selectedValue: 'test', sortDisabled: true, newDataDisabled: false, sleepDuration:20};
         this.dataRef = React.createRef();
+        this.dataStateRef = React.createRef();
     }
 
-    async handleSortPressed(dataRef, selection) {
+    async handleSortPressed(dataRef, dataStateRef, selection) {
         this.setState({ sortDisabled: true, newDataDisabled: true });
         const data = dataRef.current;
+        const dataState = dataStateRef.current;
         switch (selection) {
             case 'insertion':
-                await insertionSort(data);
+                await insertionSort(data, dataState);
                 break;
             case 'merge':
-                await mergeSort(data, 0, data.length - 1);
+                await mergeSort(data, 0, data.length - 1, dataState);
                 break;
             case 'quick':
-                await mergeSort(dataRef);
+                await mergeSort(dataRef, dataState);
                 break;
             case 'heap':
-                await mergeSort(dataRef);
+                await mergeSort(dataRef, dataState);
                 break;
             default:
                 console.log("ERROR: No Selected Algorithm");
@@ -37,7 +39,7 @@ export default class Sorting extends React.Component {
     };
     
     handleNewData = () => {
-        this.dataRef.current = getRandomData(WIDTH / 10);
+        ({ randomData: this.dataRef.current, dataState: this.dataStateRef.current } = getRandomData(WIDTH / 10));
     }
     
     handleSelection = (event) => {
@@ -54,7 +56,7 @@ export default class Sorting extends React.Component {
             <div className='Sorting'>
                 <Header/>
                 <div className="Sorting-Sketch">
-                    <SortSketch dataRef={this.dataRef}/>
+                    <SortSketch dataRef={this.dataRef} dataStateRef={this.dataStateRef}/>
                 </div>
                 <div className="selection">
                     <select name='AlgorithmSelection' onChange={this.handleSelection}>
@@ -65,8 +67,8 @@ export default class Sorting extends React.Component {
                         <option value='heap'>Heapsort</option>
                     </select>
                     <input type='number' onChange={this.handleNewSpeed} placeholder='Enter Speed 20(ms)'/>
-                    <Button onClick={(e) => this.handleSortPressed(this.dataRef, this.state.selectedValue)} disabled={this.state.sortDisabled}>Sort</Button>
-                    <Button onClick={(e) => this.handleNewData(this.dataRef, this.state.selectedValue)} disabled={this.state.newDataDisabled}>New Data</Button>
+                    <Button onClick={(e) => this.handleSortPressed(this.dataRef, this.dataStateRef, this.state.selectedValue)} disabled={this.state.sortDisabled}>Sort</Button>
+                    <Button onClick={(e) => this.handleNewData()} disabled={this.state.newDataDisabled}>New Data</Button>
                 </div>
                 <Footer/>
             </div>
