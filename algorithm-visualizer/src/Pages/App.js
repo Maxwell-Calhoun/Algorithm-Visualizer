@@ -14,12 +14,12 @@ const App = () => {
       <div className="App-body">
         <div className="Algorithms">
           <div>
-          <Button variant="secondary" size="lg" onClick={() => navigate("/Sorting")}>
+          <Button className='buttons' variant="secondary" size="lg" onClick={() => navigate("/Sorting")}>
             Sorting Algorithms
           </Button>
           </div>
           <div>
-          <Button variant="secondary" size="lg" onClick={() => navigate("/Search")}>
+          <Button className='buttons' variant="secondary" size="lg" onClick={() => navigate("/Search")}>
             Search Algorithms
           </Button>
           </div>

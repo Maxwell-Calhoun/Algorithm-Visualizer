@@ -9,17 +9,11 @@
   font-family: source-code-pro;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   position: absolute;
   top: 5vh;
   align-items: center;
   justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -30,16 +24,6 @@
   gap: 20px;
 }
 
-.App-footer {
-  color: white;
-  background-color: #343a40;
-  display: flex;
-  flex-direction: column;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.App-link {
-  color: #61dafb;
+.buttons {
+  background-color: #6B728E;
 }

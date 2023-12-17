@@ -1,7 +1,6 @@
 import '../Pages/CSS/Footer.css';
 import github from '../img/github_icon.png'
 import linkedIn from '../img/linkedin_icon.png'
-import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
     return (

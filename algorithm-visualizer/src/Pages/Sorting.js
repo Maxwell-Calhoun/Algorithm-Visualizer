@@ -1,4 +1,5 @@
 import './CSS/Sorting.css';
+import { Footer } from '../Components/Footer';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { insertionSort, mergeSort } from "../Algorithms/SortingAlgorithms";
@@ -65,6 +66,7 @@ export default class Sorting extends React.Component {
                     <Button onClick={(e) => this.handleSortPressed(this.dataRef, this.state.selectedValue)} disabled={this.state.sortDisabled}>Sort</Button>
                     <Button onClick={(e) => this.handleNewData(this.dataRef, this.state.selectedValue)} disabled={this.state.newDataDisabled}>New Data</Button>
                 </div>
+                <Footer/>
             </div>
         );
     }

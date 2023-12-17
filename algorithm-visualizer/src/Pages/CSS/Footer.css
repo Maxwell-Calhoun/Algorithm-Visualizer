@@ -1,6 +1,6 @@
 .footer {
     color: white;
-    background-color: #6B728E;
+    background-color: #474E68;
     display: flex;
     align-items: center;
     bottom: 0;
@@ -20,4 +20,8 @@
     margin-bottom: 0;
     margin-right: 5px;
     margin-left: auto;
+}
+
+.note {
+    margin-bottom: 0;
 }
