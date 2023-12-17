@@ -10,7 +10,7 @@ export const SortSketch = ({dataRef}) => {
         const sketch = (canvas) => {
             canvas.setup = () => {
                 WIDTH = canvas.windowWidth;
-                HEIGHT = canvas.windowHeight - 150;
+                HEIGHT = canvas.windowHeight - 200;
                 dataRef.current = getRandomData(WIDTH / 10);
                 canvas.createCanvas(WIDTH, HEIGHT);
             };
@@ -39,7 +39,7 @@ export const getRandomData = (n) => {
     let randomData = [];
     for (let ii = 0; ii < n; ii++) {
         // data created will not be bigger than the canvas of the screen no matter viewing device
-        randomData[ii] = Math.floor(Math.random() * HEIGHT) + 1;
+        randomData[ii] = Math.floor(Math.random() * HEIGHT);
     }
     return randomData;
 };

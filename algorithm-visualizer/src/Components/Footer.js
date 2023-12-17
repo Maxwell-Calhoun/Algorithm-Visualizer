@@ -15,10 +15,10 @@ export const Footer = () => {
             </div>
             <div className='notes'>
                 <p className='note'>
-                    Developed by: Maxwell Calhoun
+                Developed by: Maxwell Calhoun
                 </p>
                 <p className='note'>
-                    Utilizing: js, react, p5.js and node.js
+                Utilizing: js, react, p5.js and node.js
                 </p>
             </div>
         </footer>

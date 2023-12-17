@@ -4,19 +4,18 @@ const swap = async (data, x, y) => {
     var temp = data[x];
     data[x] = data[y];
     data[y] = temp;
-    await sleep(speed);
 };
 
 export const insertionSort = async (data) => {
-    let sorted = 0;
-    console.log(speed)
+    let itr = 0;
+    let value = 0;
     for (let ii = 1; ii < data.length; ii++) {
-        if (data[sorted] > data[ii]) {
-            await swap(data, ii, sorted);
-            ii = ii - 2;
-            sorted--;
-        } else {
-            sorted++;
+        itr = ii - 1;
+        value = data[ii];
+        while (itr >= 0 && value < data[itr]) {
+            swap(data, itr,itr + 1);
+            await sleep(speed);
+            itr--;
         }
     }
 };

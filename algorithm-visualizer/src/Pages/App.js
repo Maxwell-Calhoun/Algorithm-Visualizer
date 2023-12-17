@@ -1,12 +1,15 @@
 import './CSS/App.css';
 import { Footer } from '../Components/Footer';
+import { Header } from '../Components/Header';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const navigate = useNavigate();
+  
   return (
     <div className="App">
+      <Header/>
       <header className="App-header">
         <h1>Algorithm Visualizer</h1>
         <h3>Select algorithms from below to see the visualizations</h3>

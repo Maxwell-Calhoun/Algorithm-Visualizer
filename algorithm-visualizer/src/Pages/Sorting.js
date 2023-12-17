@@ -1,5 +1,6 @@
 import './CSS/Sorting.css';
 import { Footer } from '../Components/Footer';
+import { Header } from '../Components/Header';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { insertionSort, mergeSort } from "../Algorithms/SortingAlgorithms";
@@ -50,8 +51,9 @@ export default class Sorting extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="Sorting">
+            <div className='Sorting'>
+                <Header/>
+                <div className="Sorting-Sketch">
                     <SortSketch dataRef={this.dataRef}/>
                 </div>
                 <div className="selection">

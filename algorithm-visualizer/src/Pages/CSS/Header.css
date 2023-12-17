@@ -1,0 +1,22 @@
+.Header {
+    font-family: source-code-pro;
+    background-color: #474E68;
+    color: white;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    display: flex;
+}
+
+.icon {
+    width: 50px;
+    margin: 0px;
+    border: 0;
+}
+
+.Container {
+    width: 2px;
+    margin-right: 5vw;
+    margin-left: 0;
+}

@@ -1,6 +1,7 @@
 .footer {
+    font-family: source-code-pro;
     color: white;
-    background-color: #474E68;
+    background-color: #50577A;
     display: flex;
     align-items: center;
     bottom: 0;
@@ -13,7 +14,7 @@
 }
 
 .lnIcon {
-    width: 35px;
+    width: 30px;
 }
 
 .footer .notes {
