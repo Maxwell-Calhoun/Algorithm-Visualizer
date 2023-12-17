@@ -24,10 +24,10 @@ export const SortSketch = ({dataRef, dataStateRef}) => {
                 
                 for (let ii = 0; ii < data.length; ii++) {
                     // unsorted
-                    if (dataState[ii] == 0) {
+                    if (dataState[ii] === 0) {
                         canvas.fill('#474E68');
                     // sorting
-                    } else if (dataState[ii] == 1) {
+                    } else if (dataState[ii] === 1) {
                         canvas.fill('#50577A');
                     // sorted
                     } else {

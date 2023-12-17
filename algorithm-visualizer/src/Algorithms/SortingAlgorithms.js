@@ -153,7 +153,7 @@ const heapify = async (data, dataState, n, node) => {
         largestNode = leftNode;
     }
 
-    if (largestNode != node) {
+    if (largestNode !== node) {
         await swap(data, largestNode, node);
         dataState[largestNode] = 1;
         dataState[node] = 1;
