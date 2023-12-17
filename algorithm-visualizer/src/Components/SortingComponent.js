@@ -34,7 +34,6 @@ export const SortSketch = ({dataRef, dataStateRef}) => {
                         canvas.fill('#6B728E');
                     }
                     canvas.rect(ii*10, HEIGHT, 10, -data[ii]);
-                    
                 }
             };
         }
