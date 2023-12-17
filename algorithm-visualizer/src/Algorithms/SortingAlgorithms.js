@@ -1,6 +1,6 @@
 import { speed } from '../Pages/Sorting'
 
-const swap = async (data, x, y, dataState) => {
+const swap = async (data, x, y) => {
     var temp = data[x];
     data[x] = data[y];
     data[y] = temp;
@@ -13,7 +13,7 @@ export const insertionSort = async (data, dataState) => {
         itr = ii - 1;
         value = data[ii];
         while (itr >= 0 && value < data[itr]) {
-            await swap(data, itr,itr + 1, dataState);
+            await swap(data, itr,itr + 1);
             // active number being sorted
             dataState[itr] = 1;
             // number that is sorted
@@ -112,7 +112,7 @@ const partition = async (data, dataState, low, high) => {
             newPivot++;
             dataState[newPivot] = 2;
             
-            await swap(data, newPivot, ii, dataState);
+            await swap(data, newPivot, ii);
             await sleep(speed);
             //[data[newPivot], data[ii]] = [data[ii], data[newPivot]]
         }
@@ -121,9 +121,45 @@ const partition = async (data, dataState, low, high) => {
     newPivot++;
     dataState[newPivot] = 2;
     dataState[high] = 2;
-    await swap(data, newPivot, high, dataState);
+    await swap(data, newPivot, high);
     await sleep(speed);
     return newPivot;
+}
+
+export const heapSort = async (data, dataState) => {
+    let n = data.length;
+    for (let ii = Math.floor(n / 2); ii >= 0; ii--) {
+        await heapify(data, dataState, n, ii);
+    }
+
+    for (let ii = n - 1; ii > 0; ii--) {
+        dataState[ii] = 2;
+        await swap(data, ii, 0);
+        await sleep(sleep);
+        await heapify(data, dataState, ii, 0);
+    }
+}
+
+const heapify = async (data, dataState, n, node) => {
+    let largestNode = node;
+    let leftNode = 2 * node + 1;
+    let rightNode = 2 * node + 2;
+    
+    if (rightNode < n && data[largestNode] < data[rightNode]) {
+        largestNode = rightNode;
+    }
+
+    if (leftNode < n && data[largestNode] < data[leftNode]) {
+        largestNode = leftNode;
+    }
+
+    if (largestNode != node) {
+        await swap(data, largestNode, node);
+        dataState[largestNode] = 1;
+        dataState[node] = 1;
+        await sleep(sleep);
+        await heapify(data, dataState, n, largestNode);
+    }
 }
 
 const sleep = (ms) => {

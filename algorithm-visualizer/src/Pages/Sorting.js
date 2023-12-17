@@ -3,7 +3,7 @@ import { Footer } from '../Components/Footer';
 import { Header } from '../Components/Header';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { insertionSort, mergeSort, quickSort } from "../Algorithms/SortingAlgorithms";
+import { insertionSort, mergeSort, quickSort, heapSort } from "../Algorithms/SortingAlgorithms";
 import { SortSketch, getRandomData, WIDTH } from "../Components/SortingComponent";
 
 export let speed = 20;
@@ -30,7 +30,8 @@ export default class Sorting extends React.Component {
                 await quickSort(data, dataState, 0, data.length - 1);
                 break;
             case 'heap':
-                await mergeSort(data, dataState);
+                await heapSort(data, dataState);
+                dataState[0] = 2;
                 break;
             default:
                 console.log("ERROR: No Selected Algorithm");
