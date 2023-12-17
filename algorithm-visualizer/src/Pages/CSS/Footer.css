@@ -1,9 +1,23 @@
 .footer {
     color: white;
-    justify-content: center;
-    background-color: #343a40;
+    background-color: #6B728E;
     display: flex;
+    align-items: center;
     bottom: 0;
     position: absolute;
     width: 100%;
+}
+
+.ghIcon {
+    width: 40px;
+}
+
+.lnIcon {
+    width: 35px;
+}
+
+.footer .notes {
+    margin-bottom: 0;
+    margin-right: 5px;
+    margin-left: auto;
 }

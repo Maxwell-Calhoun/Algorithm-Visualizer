@@ -12,7 +12,7 @@ export default function Search() {
             <div className='Construction'>
                 <h1>Visualization Under Construction</h1>
                 <Button variant="secondary" size="lg" onClick={() => navigate("/")}>
-                Back Home
+                    Back Home
                 </Button>
             </div>
             <Footer/>
