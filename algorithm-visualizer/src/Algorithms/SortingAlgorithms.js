@@ -4,10 +4,6 @@ const swap = async (data, x, y, dataState) => {
     var temp = data[x];
     data[x] = data[y];
     data[y] = temp;
-    // active number being sorted
-    dataState[x] = 1;
-    // number that is sorted
-    dataState[y] = 2;
 };
 
 export const insertionSort = async (data, dataState) => {
@@ -17,7 +13,11 @@ export const insertionSort = async (data, dataState) => {
         itr = ii - 1;
         value = data[ii];
         while (itr >= 0 && value < data[itr]) {
-            swap(data, itr,itr + 1, dataState);
+            await swap(data, itr,itr + 1, dataState);
+            // active number being sorted
+            dataState[itr] = 1;
+            // number that is sorted
+            dataState[itr + 1] = 2;
             await sleep(speed);
             itr--;
         }
@@ -37,7 +37,7 @@ export const mergeSort = async (arr, leftItr, rightItr, dataState) => {
 
     await mergeSort(arr, leftItr, middle, dataState);
     await mergeSort(arr, middle + 1, rightItr, dataState);
-    return merge(arr, leftItr, rightItr, middle, dataState)
+    return await merge(arr, leftItr, rightItr, middle, dataState)
 }
 
 const merge = async (arr, left, right, middle, dataState) => {
@@ -92,6 +92,40 @@ const merge = async (arr, left, right, middle, dataState) => {
         jj++;
     }
 }
+
+export const quickSort = async (data, dataState, low, high) => {
+    if (low < high) {
+        let pivot = await partition(data, dataState, low, high);
+        await quickSort(data, dataState, low, pivot - 1);
+        await quickSort(data, dataState, pivot + 1, high);
+    }
+}
+
+const partition = async (data, dataState, low, high) => {
+    let pivot = data[high];
+    let newPivot = low - 1;
+
+    for (let ii = low; ii < high; ii++) {
+        // active number being sorted
+        dataState[ii] = 1;
+        if (pivot > data[ii]) {
+            newPivot++;
+            dataState[newPivot] = 2;
+            
+            await swap(data, newPivot, ii, dataState);
+            await sleep(speed);
+            //[data[newPivot], data[ii]] = [data[ii], data[newPivot]]
+        }
+    }
+
+    newPivot++;
+    dataState[newPivot] = 2;
+    dataState[high] = 2;
+    await swap(data, newPivot, high, dataState);
+    await sleep(speed);
+    return newPivot;
+}
+
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
