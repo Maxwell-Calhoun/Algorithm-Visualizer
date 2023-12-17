@@ -1,5 +1,4 @@
 .Search {
-    text-align: center;
     min-height: 100vh;
     position: relative;
     background-color: #404258;
@@ -8,6 +7,10 @@
     display: flex;
     color: white;
     flex-direction: column;
+}
+
+.Construction {
+    text-align: center;
 }
 
 .wrenchImg {
